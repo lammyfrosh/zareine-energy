@@ -20,8 +20,8 @@ export default function Hero() {
         style={{ backgroundImage: "url('/images/hero-energy.jpg')" }}
       />
 
-      <div className="absolute inset-0 bg-[var(--z-navy)]/50" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[var(--z-navy)]/92 via-[var(--z-navy)]/68 to-[var(--z-navy)]/18" />
+      <div className="absolute inset-0 bg-[var(--z-navy)]/48" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[var(--z-navy)]/92 via-[var(--z-navy)]/66 to-[var(--z-navy)]/18" />
 
       <div className="absolute bottom-10 left-0 right-0 hidden justify-center md:flex">
         <div className="shimmer-line h-[2px] w-44 bg-white/70" />
@@ -42,7 +42,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="mt-6 text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-7xl"
+            className="mt-6 display-font text-5xl font-semibold leading-[0.95] tracking-tight sm:text-6xl lg:text-8xl"
           >
             Reliable Power
             <br />
@@ -81,36 +81,6 @@ export default function Hero() {
               Investor Relations
               <ArrowRightIcon />
             </a>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.45 }}
-            className="mt-12 grid max-w-3xl gap-4 sm:grid-cols-3"
-          >
-            {[
-              ["5", "Active Projects"],
-              ["230MW+", "Power Pipeline"],
-              ["Q4 2026", "Target COD"],
-            ].map(([value, label], i) => (
-              <motion.div
-                key={label}
-                animate={{ y: [0, -6, 0] }}
-                transition={{
-                  duration: 4.5,
-                  repeat: Infinity,
-                  delay: i * 0.3,
-                  ease: "easeInOut",
-                }}
-                className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-md"
-              >
-                <div className="text-2xl font-semibold">{value}</div>
-                <div className="mt-1 text-sm uppercase tracking-[0.2em] text-gray-200">
-                  {label}
-                </div>
-              </motion.div>
-            ))}
           </motion.div>
         </div>
       </div>

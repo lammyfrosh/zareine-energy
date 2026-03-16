@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --z-blue: #90d4f9;
-  --z-blue-strong: #5bbded;
-  --z-blue-soft: #eaf7ff;
-  --z-blue-pale: #f6fbff;
-  --z-navy: #0f2f4f;
-  --z-navy-2: #173e64;
+  --z-blue: #8fd4fb;
+  --z-blue-2: #56b9ee;
+  --z-blue-soft: #e9f7ff;
+  --z-blue-pale: #f7fbff;
+  --z-navy: #0d2f4f;
+  --z-navy-2: #143b61;
   --z-text: #102033;
   --z-white: #ffffff;
 }
@@ -19,7 +19,7 @@ body {
   margin: 0;
   color: var(--z-text);
   background: var(--z-blue-pale);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -30,6 +30,17 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-font {
+  font-family: var(--font-display), Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
 .page-shell {
   position: relative;
   overflow: hidden;
@@ -37,19 +48,9 @@ a {
 
 .soft-grid {
   background-image:
-    linear-gradient(rgba(16, 47, 79, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(16, 47, 79, 0.045) 1px, transparent 1px);
+    linear-gradient(rgba(13, 47, 79, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13, 47, 79, 0.045) 1px, transparent 1px);
   background-size: 42px 42px;
-}
-
-.glass-card {
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(16px);
-}
-
-.elevated {
-  box-shadow: 0 25px 80px rgba(16, 47, 79, 0.08);
 }
 
 .hover-lift {
@@ -61,7 +62,7 @@ a {
 
 .hover-lift:hover {
   transform: translateY(-8px);
-  box-shadow: 0 25px 60px rgba(16, 47, 79, 0.12);
+  box-shadow: 0 25px 60px rgba(13, 47, 79, 0.12);
 }
 
 .partner-marquee {
