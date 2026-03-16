@@ -1,86 +1,113 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
-
-const ArrowRightIcon = () => (
-  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <path d="M5 12h14" />
-    <path d="M13 5l7 7-7 7" />
-  </svg>
-);
+import { useState } from "react";
 
 export default function Hero() {
+  const [videoError, setVideoError] = useState(false);
+
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-[var(--z-navy)]">
-      <motion.div
-        initial={{ scale: 1.08, opacity: 0.5 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/hero-energy.jpg')" }}
-      />
+    <section className="relative min-h-screen overflow-hidden bg-black text-white">
+      {!videoError ? (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/refinery-night.png"
+          onError={() => setVideoError(true)}
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src="/videos/hero-refinery.mp4" type="video/mp4" />
+        </video>
+      ) : (
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/refinery-night.png')" }}
+        />
+      )}
 
-      <div className="absolute inset-0 bg-[var(--z-navy)]/48" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[var(--z-navy)]/92 via-[var(--z-navy)]/66 to-[var(--z-navy)]/18" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(3,10,26,0.45),rgba(3,10,26,0.68),rgba(3,10,26,0.88))]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(67,201,255,0.12),transparent_28%)]" />
 
-      <div className="absolute bottom-10 left-0 right-0 hidden justify-center md:flex">
-        <div className="shimmer-line h-[2px] w-44 bg-white/70" />
-      </div>
-
-      <div className="relative z-10 mx-auto max-w-7xl px-6 pt-28 pb-20 lg:px-8">
-        <div className="max-w-4xl text-white">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6 pb-16 pt-32 sm:px-10 lg:px-8">
+        <div className="max-w-4xl">
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-sm font-medium uppercase tracking-[0.34em] text-[var(--z-blue)]"
+            className="mb-4 text-xs font-semibold uppercase tracking-[0.45em] text-[var(--z-blue)] sm:text-sm"
           >
-            From Wellhead to Grid
+            Energy Infrastructure • Industrial Excellence • Strategic Growth
           </motion.p>
 
           <motion.h1
-            initial={{ opacity: 0, y: 28 }}
+            initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="mt-6 display-font text-5xl font-semibold leading-[0.95] tracking-tight sm:text-6xl lg:text-8xl"
+            transition={{ duration: 0.85, delay: 0.1 }}
+            className="max-w-4xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-7xl"
           >
-            Reliable Power
-            <br />
-            For A Growing Nigeria
+            Building Premium Energy Infrastructure for High-Impact Industries
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-6 max-w-2xl text-base leading-8 text-gray-200 sm:text-lg"
+            transition={{ duration: 0.85, delay: 0.2 }}
+            className="mt-6 max-w-2xl text-base leading-8 text-white/80 sm:text-lg"
           >
-            Zarein Energy is an independent Nigerian power producer developing
-            gas-to-power solutions for industrial, commercial and grid-scale
-            energy demand across Nigeria.
+            Zarein Energy delivers reliable industrial energy solutions,
+            operational intelligence, and infrastructure capability designed to
+            support growth, performance, and long-term value creation.
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-9 flex flex-wrap gap-4"
+            transition={{ duration: 0.85, delay: 0.3 }}
+            className="mt-8 flex flex-wrap gap-4"
           >
-            <a
+            <Link
               href="/projects"
-              className="inline-flex items-center gap-2 rounded-full bg-[var(--z-blue)] px-6 py-3 text-sm font-semibold text-[var(--z-navy)] transition hover:opacity-90"
+              className="rounded-full bg-[var(--z-blue)] px-6 py-3 text-sm font-semibold text-[var(--z-navy)] transition hover:scale-[1.02] hover:opacity-95"
             >
               Explore Projects
-              <ArrowRightIcon />
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/investor-relations"
-              className="inline-flex items-center gap-2 rounded-full border border-white px-6 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-[var(--z-navy)]"
+              className="rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-md transition hover:bg-white/15"
             >
               Investor Relations
-              <ArrowRightIcon />
-            </a>
+            </Link>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.85, delay: 0.4 }}
+            className="mt-14 grid max-w-4xl grid-cols-2 gap-4 lg:grid-cols-4"
+          >
+            <div className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-xl">
+              <p className="text-2xl font-semibold text-white">Industrial</p>
+              <p className="mt-2 text-sm text-white/70">Energy capability</p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-xl">
+              <p className="text-2xl font-semibold text-white">Premium</p>
+              <p className="mt-2 text-sm text-white/70">Project delivery focus</p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-xl">
+              <p className="text-2xl font-semibold text-white">Reliable</p>
+              <p className="mt-2 text-sm text-white/70">Operational support</p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-xl">
+              <p className="text-2xl font-semibold text-white">Strategic</p>
+              <p className="mt-2 text-sm text-white/70">Client partnerships</p>
+            </div>
           </motion.div>
         </div>
       </div>

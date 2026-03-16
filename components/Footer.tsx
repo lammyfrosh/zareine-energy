@@ -27,14 +27,20 @@ export default function Footer() {
               alt="Zarein Energy Logo"
               className="h-12 w-auto object-contain"
             />
-            <div className="text-lg font-semibold tracking-[0.24em]">
-              ZAREIN ENERGY
+            <div className="leading-tight">
+              <div className="text-lg font-semibold tracking-[0.24em]">
+                ZAREIN ENERGY
+              </div>
+              <div className="text-[11px] uppercase tracking-[0.3em] text-white/60">
+                Premium Energy Infrastructure
+              </div>
             </div>
           </div>
 
           <p className="mt-5 max-w-md text-sm leading-7 text-gray-300">
-            From Wellhead to Grid — Zarein Energy. Reliable power solutions for
-            industrial, commercial and grid-scale development across Nigeria.
+            Delivering dependable energy solutions, industrial infrastructure,
+            and strategic operational capability for high-value clients and
+            long-term growth opportunities.
           </p>
 
           <div className="mt-6 flex gap-4 text-white">
@@ -60,22 +66,22 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="display-font text-3xl font-semibold">Quick Contact</h3>
+          <h3 className="text-2xl font-semibold sm:text-3xl">Quick Contact</h3>
           <form className="mt-6 space-y-4">
             <input
               type="text"
               placeholder="Full Name"
-              className="w-full rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-gray-300 outline-none"
+              className="w-full rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-gray-300 outline-none transition focus:border-[var(--z-blue)]"
             />
             <input
               type="email"
               placeholder="Email Address"
-              className="w-full rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-gray-300 outline-none"
+              className="w-full rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-gray-300 outline-none transition focus:border-[var(--z-blue)]"
             />
             <textarea
               rows={4}
               placeholder="Message"
-              className="w-full rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-gray-300 outline-none"
+              className="w-full rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-gray-300 outline-none transition focus:border-[var(--z-blue)]"
             />
             <button
               type="submit"
@@ -87,9 +93,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="display-font text-3xl font-semibold">
-            Contact Details
-          </h3>
+          <h3 className="text-2xl font-semibold sm:text-3xl">Contact Details</h3>
           <div className="mt-6 space-y-4 text-sm leading-7 text-gray-300">
             <p>Lagos, Nigeria</p>
             <p>Jerry Raji</p>
@@ -102,7 +106,7 @@ export default function Footer() {
       <div className="border-t border-white/10 py-6">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 text-sm text-gray-300 lg:flex-row lg:items-center lg:justify-between lg:px-8">
           <p>© 2026 Zarein Energy. All rights reserved.</p>
-          <p>Blue/white premium corporate website experience.</p>
+          <p>Built for premium corporate presentation.</p>
         </div>
       </div>
     </footer>
