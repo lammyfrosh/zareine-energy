@@ -9,7 +9,9 @@ export default function InvestorRelationsPage() {
       <main className="min-h-screen bg-[var(--z-navy)] px-6 py-28 text-white lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--z-blue)]">Investor Relations</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--z-blue)]">
+              Investor Relations
+            </p>
             <h1 className="mt-4 max-w-4xl display-font text-5xl font-semibold tracking-tight sm:text-6xl">
               Structured opportunities for long-term energy investment
             </h1>
@@ -27,7 +29,10 @@ export default function InvestorRelationsPage() {
                   The company’s transaction philosophy is aligned with institutional
                   standards, strong project governance and development-finance-grade structuring.
                 </p>
-                <a href="mailto:invest@zareinenergy.com" className="inline-block rounded-full bg-white px-6 py-3 text-sm font-semibold text-[var(--z-navy)] transition hover:bg-[var(--z-blue)]">
+                <a
+                  href="mailto:invest@zareinenergy.com"
+                  className="inline-block rounded-full bg-white px-6 py-3 text-sm font-semibold text-[var(--z-navy)] transition hover:bg-[var(--z-blue)]"
+                >
                   invest@zareinenergy.com
                 </a>
               </div>
@@ -35,7 +40,11 @@ export default function InvestorRelationsPage() {
 
             <Reveal delay={0.08}>
               <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/10 backdrop-blur-md">
-                <img src="/images/plant%20(2).jpg" alt="Engineer at energy infrastructure site" className="h-full min-h-[360px] w-full object-cover" />
+                <img
+                  src="/images/plant%20(2).jpg"
+                  alt="Engineer at energy infrastructure site"
+                  className="h-full min-h-[360px] w-full object-cover"
+                />
               </div>
             </Reveal>
           </div>

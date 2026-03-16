@@ -12,7 +12,7 @@ export default function NewsUpdatesPage() {
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--z-navy)]">
               News & Updates
             </p>
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-[var(--z-text)] sm:text-5xl">
+            <h1 className="mt-4 display-font text-5xl font-semibold tracking-tight text-[var(--z-text)] sm:text-6xl">
               Latest company developments and market activity
             </h1>
           </Reveal>

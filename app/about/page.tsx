@@ -12,7 +12,7 @@ export default function AboutPage() {
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--z-navy)]">
               About Us
             </p>
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-[var(--z-text)] sm:text-5xl">
+            <h1 className="mt-4 display-font text-5xl font-semibold tracking-tight text-[var(--z-text)] sm:text-6xl">
               From Wellhead to Grid
             </h1>
           </Reveal>
@@ -25,14 +25,12 @@ export default function AboutPage() {
                   on developing gas-to-power infrastructure for industrial,
                   commercial and grid-scale energy users.
                 </p>
-
                 <p>
                   The company is positioned to deliver reliable power solutions
                   through structured project development, bankable partnerships,
                   efficient generation technology and long-term operational
                   excellence.
                 </p>
-
                 <p>
                   With a growing portfolio spanning embedded power, gas
                   processing and infrastructure-led developments, Zarein Energy

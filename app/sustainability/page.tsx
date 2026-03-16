@@ -12,7 +12,7 @@ export default function SustainabilityPage() {
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--z-navy)]">
               Sustainability
             </p>
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-[var(--z-text)] sm:text-5xl">
+            <h1 className="mt-4 display-font text-5xl font-semibold tracking-tight text-[var(--z-text)] sm:text-6xl">
               A practical transition pathway for reliable power
             </h1>
           </Reveal>
@@ -24,7 +24,6 @@ export default function SustainabilityPage() {
                 reliable alternative to diesel and heavy fuel oil in high-demand
                 environments.
               </p>
-
               <p>
                 The company’s infrastructure direction also considers long-term
                 ESG alignment, operational efficiency and future-readiness.

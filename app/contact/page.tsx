@@ -12,7 +12,7 @@ export default function ContactPage() {
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--z-navy)]">
               Contact
             </p>
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-[var(--z-text)] sm:text-5xl">
+            <h1 className="mt-4 display-font text-5xl font-semibold tracking-tight text-[var(--z-text)] sm:text-6xl">
               Let’s start the conversation
             </h1>
           </Reveal>
@@ -20,60 +20,21 @@ export default function ContactPage() {
           <div className="mt-10 grid gap-10 lg:grid-cols-2">
             <Reveal>
               <div className="space-y-5 text-lg text-gray-700">
-                <p>
-                  <span className="font-semibold text-[var(--z-navy)]">
-                    Location:
-                  </span>{" "}
-                  Lagos, Nigeria
-                </p>
-                <p>
-                  <span className="font-semibold text-[var(--z-navy)]">
-                    Contact Person:
-                  </span>{" "}
-                  Jerry Raji
-                </p>
-                <p>
-                  <span className="font-semibold text-[var(--z-navy)]">
-                    Investor Email:
-                  </span>{" "}
-                  invest@zareinenergy.com
-                </p>
-                <p>
-                  <span className="font-semibold text-[var(--z-navy)]">
-                    General Email:
-                  </span>{" "}
-                  info@zareinenergy.com
-                </p>
+                <p><span className="font-semibold text-[var(--z-navy)]">Location:</span> Lagos, Nigeria</p>
+                <p><span className="font-semibold text-[var(--z-navy)]">Contact Person:</span> Jerry Raji</p>
+                <p><span className="font-semibold text-[var(--z-navy)]">Investor Email:</span> invest@zareinenergy.com</p>
+                <p><span className="font-semibold text-[var(--z-navy)]">General Email:</span> info@zareinenergy.com</p>
               </div>
             </Reveal>
 
             <Reveal delay={0.08}>
               <form className="rounded-[2rem] bg-[var(--z-blue-soft)] p-8 ring-1 ring-gray-200">
                 <div className="grid gap-5">
-                  <input
-                    type="text"
-                    placeholder="Full Name"
-                    className="rounded-2xl border border-gray-300 bg-white px-4 py-3 outline-none"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    className="rounded-2xl border border-gray-300 bg-white px-4 py-3 outline-none"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Company Name"
-                    className="rounded-2xl border border-gray-300 bg-white px-4 py-3 outline-none"
-                  />
-                  <textarea
-                    placeholder="Message"
-                    rows={5}
-                    className="rounded-2xl border border-gray-300 bg-white px-4 py-3 outline-none"
-                  />
-                  <button
-                    type="submit"
-                    className="rounded-full bg-[var(--z-navy)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--z-navy-2)]"
-                  >
+                  <input type="text" placeholder="Full Name" className="rounded-2xl border border-gray-300 bg-white px-4 py-3 outline-none" />
+                  <input type="email" placeholder="Email Address" className="rounded-2xl border border-gray-300 bg-white px-4 py-3 outline-none" />
+                  <input type="text" placeholder="Company Name" className="rounded-2xl border border-gray-300 bg-white px-4 py-3 outline-none" />
+                  <textarea rows={5} placeholder="Message" className="rounded-2xl border border-gray-300 bg-white px-4 py-3 outline-none" />
+                  <button type="submit" className="rounded-full bg-[var(--z-navy)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--z-navy-2)]">
                     Send Enquiry
                   </button>
                 </div>

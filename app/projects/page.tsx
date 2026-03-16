@@ -18,7 +18,9 @@ export default function ProjectsPage() {
         <div className="soft-grid absolute inset-0 opacity-35" />
         <div className="relative mx-auto max-w-7xl">
           <Reveal>
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--z-navy)]">Projects</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--z-navy)]">
+              Projects
+            </p>
             <h1 className="mt-4 display-font text-5xl font-semibold tracking-tight text-[var(--z-text)] sm:text-6xl">
               Building Nigeria’s energy future project by project
             </h1>
@@ -28,7 +30,9 @@ export default function ProjectsPage() {
             {projects.map((project, index) => (
               <Reveal key={project.title} delay={index * 0.07}>
                 <div className="hover-lift rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-gray-200">
-                  <h2 className="display-font text-3xl font-semibold text-[var(--z-navy)]">{project.title}</h2>
+                  <h2 className="display-font text-3xl font-semibold text-[var(--z-navy)]">
+                    {project.title}
+                  </h2>
                   <p className="mt-4 leading-7 text-gray-600">{project.text}</p>
                 </div>
               </Reveal>

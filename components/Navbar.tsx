@@ -23,15 +23,26 @@ export default function Navbar() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <Link href="/" className="text-lg font-semibold tracking-[0.24em]">
-            ZAREIN ENERGY
+          <Link href="/" className="flex items-center gap-3">
+            <img
+              src="/logos/zarein-logo.png"
+              alt="Zarein Energy Logo"
+              className="h-11 w-auto object-contain"
+            />
+            <span className="text-lg font-semibold tracking-[0.2em]">
+              ZAREIN ENERGY
+            </span>
           </Link>
         </motion.div>
 
         <motion.nav
           initial={{ opacity: 0, y: -16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+          transition={{
+            duration: 0.7,
+            delay: 0.15,
+            ease: [0.22, 1, 0.36, 1],
+          }}
           className="hidden items-center gap-7 text-sm md:flex"
         >
           {navItems.map((item) => (

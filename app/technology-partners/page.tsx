@@ -27,7 +27,7 @@ export default function TechnologyPartnersPage() {
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--z-navy)]">
               Technology & Partners
             </p>
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-[var(--z-text)] sm:text-5xl">
+            <h1 className="mt-4 display-font text-5xl font-semibold tracking-tight text-[var(--z-text)] sm:text-6xl">
               Built with trusted technology and strategic relationships
             </h1>
           </Reveal>
@@ -52,7 +52,6 @@ export default function TechnologyPartnersPage() {
                       </span>
                     )}
                   </div>
-
                   <h2 className="mt-5 text-xl font-semibold text-[var(--z-navy)]">
                     {partner.name}
                   </h2>
