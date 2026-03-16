@@ -1,26 +1,131 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --z-blue: #90d4f9;
+  --z-blue-soft: #d9f1fd;
+  --z-dark: #14395b;
+  --z-dark-2: #0f2941;
+  --z-bg: #f7fbfe;
+  --z-text: #0f172a;
+  --z-white: #ffffff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  margin: 0;
+  background: var(--z-bg);
+  color: var(--z-text);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1.06);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes floatSlow {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes shimmerLine {
+  0% {
+    transform: scaleX(0.3);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0.3);
+    opacity: 0.35;
+  }
+}
+
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.15s;
+}
+
+.delay-2 {
+  animation-delay: 0.3s;
+}
+
+.delay-3 {
+  animation-delay: 0.45s;
+}
+
+.hero-zoom {
+  animation: heroZoom 1.5s ease forwards;
+}
+
+.float-slow {
+  animation: floatSlow 4.5s ease-in-out infinite;
+}
+
+.shimmer-line {
+  animation: shimmerLine 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.hover-lift {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 50px rgba(17, 35, 56, 0.12);
+}
+
+.section-shell {
+  position: relative;
+  overflow: hidden;
+}
+
+.soft-grid {
+  background-image:
+    linear-gradient(rgba(20, 57, 91, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 57, 91, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
