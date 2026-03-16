@@ -1,3 +1,5 @@
+import Reveal from "@/components/Reveal";
+
 const projects = [
   {
     title: "Amuwo Odofin IPP",
@@ -21,44 +23,45 @@ const BoltIcon = () => (
 
 export default function HomeProjects() {
   return (
-    <section className="section-shell bg-[var(--z-bg)] py-24">
-      <div className="soft-grid absolute inset-0 opacity-40" />
+    <section className="page-shell bg-[var(--z-blue-pale)] py-24">
+      <div className="soft-grid absolute inset-0 opacity-35" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-          <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--z-dark)]">
-              Flagship Projects
-            </p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[var(--z-text)] sm:text-4xl">
-              Structured projects built for growth and credibility
-            </h2>
-          </div>
+        <Reveal>
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--z-navy)]">
+                Flagship Projects
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[var(--z-text)] sm:text-4xl">
+                Structured projects built for growth and credibility
+              </h2>
+            </div>
 
-          <a
-            href="/projects"
-            className="text-sm font-semibold text-[var(--z-dark)] transition hover:opacity-70"
-          >
-            View all projects →
-          </a>
-        </div>
+            <a
+              href="/projects"
+              className="text-sm font-semibold text-[var(--z-navy)] transition hover:opacity-70"
+            >
+              View all projects →
+            </a>
+          </div>
+        </Reveal>
 
         <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {projects.map((project) => (
-            <div
-              key={project.title}
-              className="hover-lift rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-gray-200"
-            >
-              <div className="inline-flex rounded-2xl bg-[var(--z-blue-soft)] p-3 text-[var(--z-dark)]">
-                <BoltIcon />
+          {projects.map((project, index) => (
+            <Reveal key={project.title} delay={index * 0.08}>
+              <div className="hover-lift rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-gray-200">
+                <div className="inline-flex rounded-2xl bg-[var(--z-blue-soft)] p-3 text-[var(--z-navy)]">
+                  <BoltIcon />
+                </div>
+
+                <h3 className="mt-5 text-2xl font-semibold text-[var(--z-navy)]">
+                  {project.title}
+                </h3>
+
+                <p className="mt-4 leading-7 text-gray-600">{project.text}</p>
               </div>
-
-              <h3 className="mt-5 text-2xl font-semibold text-[var(--z-dark)]">
-                {project.title}
-              </h3>
-
-              <p className="mt-4 leading-7 text-gray-600">{project.text}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

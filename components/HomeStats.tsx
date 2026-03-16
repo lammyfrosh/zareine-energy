@@ -1,3 +1,5 @@
+import Reveal from "@/components/Reveal";
+
 const stats = [
   {
     value: "100MMscfd",
@@ -42,22 +44,21 @@ const stats = [
 
 export default function HomeStats() {
   return (
-    <section className="section-shell bg-[var(--z-blue)] py-20">
+    <section className="page-shell bg-[var(--z-blue)] py-20">
       <div className="soft-grid absolute inset-0 opacity-30" />
       <div className="relative mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-2 xl:grid-cols-4 lg:px-8">
-        {stats.map((item) => (
-          <div
-            key={item.label}
-            className="hover-lift rounded-[2rem] border border-white/50 bg-white/60 p-8 backdrop-blur-md"
-          >
-            <div className="text-[var(--z-dark)]">{item.icon}</div>
-            <div className="mt-5 text-3xl font-semibold text-[var(--z-dark)]">
-              {item.value}
+        {stats.map((item, index) => (
+          <Reveal key={item.label} delay={index * 0.08}>
+            <div className="hover-lift rounded-[2rem] border border-white/60 bg-white/60 p-8 backdrop-blur-md">
+              <div className="text-[var(--z-navy)]">{item.icon}</div>
+              <div className="mt-5 text-3xl font-semibold text-[var(--z-navy)]">
+                {item.value}
+              </div>
+              <div className="mt-2 text-sm uppercase tracking-[0.2em] text-[var(--z-navy)]/85">
+                {item.label}
+              </div>
             </div>
-            <div className="mt-2 text-sm uppercase tracking-[0.2em] text-[var(--z-dark)]/80">
-              {item.label}
-            </div>
-          </div>
+          </Reveal>
         ))}
       </div>
     </section>

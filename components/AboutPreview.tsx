@@ -1,3 +1,5 @@
+import Reveal from "@/components/Reveal";
+
 const ShieldIcon = () => (
   <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
     <path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3Z" />
@@ -14,16 +16,18 @@ export default function AboutPreview() {
   return (
     <section className="bg-white py-24">
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2 lg:px-8">
-        <div className="overflow-hidden rounded-[2rem] shadow-xl ring-1 ring-gray-200">
-          <img
-            src="/images/plant%20(1).jpg"
-            alt="Industrial plant"
-            className="h-[440px] w-full object-cover transition duration-700 hover:scale-[1.04]"
-          />
-        </div>
+        <Reveal>
+          <div className="overflow-hidden rounded-[2rem] shadow-xl ring-1 ring-gray-200">
+            <img
+              src="/images/plant%20(1).jpg"
+              alt="Industrial plant"
+              className="h-[460px] w-full object-cover transition duration-700 hover:scale-[1.04]"
+            />
+          </div>
+        </Reveal>
 
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--z-dark)]">
+        <Reveal delay={0.1}>
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--z-navy)]">
             About Zarein
           </p>
 
@@ -46,11 +50,11 @@ export default function AboutPreview() {
           </div>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            <div className="hover-lift rounded-3xl border border-gray-200 bg-[var(--z-bg)] p-5">
-              <div className="text-[var(--z-dark)]">
+            <div className="hover-lift rounded-3xl border border-gray-200 bg-[var(--z-blue-soft)] p-5">
+              <div className="text-[var(--z-navy)]">
                 <ShieldIcon />
               </div>
-              <h3 className="mt-3 text-lg font-semibold text-[var(--z-dark)]">
+              <h3 className="mt-3 text-lg font-semibold text-[var(--z-navy)]">
                 Bankable Structure
               </h3>
               <p className="mt-2 text-sm leading-6 text-gray-600">
@@ -58,11 +62,11 @@ export default function AboutPreview() {
               </p>
             </div>
 
-            <div className="hover-lift rounded-3xl border border-gray-200 bg-[var(--z-bg)] p-5">
-              <div className="text-[var(--z-dark)]">
+            <div className="hover-lift rounded-3xl border border-gray-200 bg-[var(--z-blue-soft)] p-5">
+              <div className="text-[var(--z-navy)]">
                 <FactoryIcon />
               </div>
-              <h3 className="mt-3 text-lg font-semibold text-[var(--z-dark)]">
+              <h3 className="mt-3 text-lg font-semibold text-[var(--z-navy)]">
                 Infrastructure Focus
               </h3>
               <p className="mt-2 text-sm leading-6 text-gray-600">
@@ -70,7 +74,7 @@ export default function AboutPreview() {
               </p>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
