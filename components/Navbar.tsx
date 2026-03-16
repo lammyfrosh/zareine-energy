@@ -19,7 +19,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[var(--z-navy)]/55 text-white backdrop-blur-2xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/8 bg-[var(--z-navy)]/78 text-white backdrop-blur-2xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, x: -24 }}
@@ -57,7 +57,7 @@ export default function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className="relative text-white/90 transition hover:text-[var(--z-blue)]"
+              className="text-white/90 transition hover:text-[var(--z-blue)]"
             >
               {item.label}
             </Link>
@@ -65,7 +65,7 @@ export default function Navbar() {
 
           <Link
             href="/contact"
-            className="rounded-full border border-white/15 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[var(--z-blue)] hover:text-[var(--z-navy)]"
+            className="rounded-full border border-white/15 bg-white/8 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[var(--z-blue)] hover:text-[var(--z-navy)]"
           >
             Get in Touch
           </Link>

@@ -106,7 +106,7 @@ export default function Footer() {
       <div className="border-t border-white/10 py-6">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 text-sm text-gray-300 lg:flex-row lg:items-center lg:justify-between lg:px-8">
           <p>© 2026 Zarein Energy. All rights reserved.</p>
-          <p>Built for premium corporate presentation.</p>
+          
         </div>
       </div>
     </footer>

@@ -28,8 +28,17 @@ export default function Hero() {
         />
       )}
 
-      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(3,10,26,0.45),rgba(3,10,26,0.68),rgba(3,10,26,0.88))]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(67,201,255,0.12),transparent_28%)]" />
+      {/* Main dark cinematic overlay */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(3,10,26,0.68),rgba(3,10,26,0.78),rgba(3,10,26,0.92))]" />
+
+      {/* Blue cinematic glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(95,212,255,0.10),transparent_28%)]" />
+
+      {/* Top-right mask to bury Luma watermark */}
+      <div className="absolute right-0 top-0 z-[1] h-40 w-72 bg-[linear-gradient(to_bottom_left,rgba(3,10,26,0.96),rgba(3,10,26,0.82),transparent)] sm:h-48 sm:w-80 lg:h-56 lg:w-[26rem]" />
+
+      {/* Extra subtle full overlay to soften video artifacts */}
+      <div className="absolute inset-0 bg-black/18" />
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6 pb-16 pt-32 sm:px-10 lg:px-8">
         <div className="max-w-4xl">
@@ -55,7 +64,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.2 }}
-            className="mt-6 max-w-2xl text-base leading-8 text-white/80 sm:text-lg"
+            className="mt-6 max-w-2xl text-base leading-8 text-white/82 sm:text-lg"
           >
             Zarein Energy delivers reliable industrial energy solutions,
             operational intelligence, and infrastructure capability designed to
