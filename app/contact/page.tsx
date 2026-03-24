@@ -20,8 +20,7 @@ export default function ContactPage() {
           <div className="mt-10 grid gap-10 lg:grid-cols-2">
             <Reveal>
               <div className="space-y-5 text-lg text-gray-700">
-                <p><span className="font-semibold text-[var(--z-navy)]">Location:</span> Lagos, Nigeria</p>
-                <p><span className="font-semibold text-[var(--z-navy)]">Contact Person:</span> Jerry Raji</p>
+          
                 <p><span className="font-semibold text-[var(--z-navy)]">Investor Email:</span> invest@zareinenergy.com</p>
                 <p><span className="font-semibold text-[var(--z-navy)]">General Email:</span> info@zareinenergy.com</p>
               </div>
