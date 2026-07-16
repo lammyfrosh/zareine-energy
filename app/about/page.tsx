@@ -22,12 +22,6 @@ const teamMembers = [
       "Energy and industrial projects specialist with deep expertise in rotating equipment, electro-mechanical systems, procurement strategy, vendor management, and end-to-end project delivery.",
   },
   {
-    name: "Opeyemi Folayan",
-    role: "Technical Consultant on Energy",
-    summary:
-      "Siemens-certified electrical engineer with extensive experience in power systems, regulatory strategy, commercial negotiations, and both on-grid and off-grid infrastructure planning.",
-  },
-  {
     name: "Damilare Olayiwola",
     role: "Technical Consultant",
     summary:
@@ -54,7 +48,9 @@ export default function AboutPage() {
               alt="Zarein Energy leadership and corporate engagement"
               className="h-full w-full object-cover"
             />
+
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,10,24,0.58)_0%,rgba(3,10,24,0.74)_42%,rgba(3,10,24,0.88)_100%)]" />
+
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(143,212,251,0.16),transparent_28%)]" />
           </div>
 
@@ -91,12 +87,14 @@ export default function AboutPage() {
                   focused on developing gas-to-power infrastructure for
                   industrial, commercial and grid-scale energy users.
                 </p>
+
                 <p>
                   The company is positioned to deliver reliable power solutions
                   through structured project development, bankable partnerships,
                   efficient generation technology and long-term operational
                   excellence.
                 </p>
+
                 <p>
                   With a growing portfolio spanning embedded power, gas
                   processing and infrastructure-led developments, Zarein Energy
@@ -125,10 +123,12 @@ export default function AboutPage() {
                 <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--z-blue-2)]">
                   Our Team
                 </p>
+
                 <h2 className="mt-4 text-4xl font-semibold tracking-tight text-[var(--z-text)] sm:text-5xl">
                   Experienced professionals driving execution, finance, and
                   technical excellence
                 </h2>
+
                 <p className="mt-6 text-lg leading-8 text-gray-700">
                   Our leadership and advisory team combines project delivery
                   discipline, financial depth, energy sector expertise, and
@@ -138,22 +138,38 @@ export default function AboutPage() {
               </div>
             </Reveal>
 
-            <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {teamMembers.map((member, index) => (
-                <Reveal key={member.name} delay={index * 0.05}>
-                  <div className="h-full rounded-[1.75rem] border border-[rgba(13,47,79,0.08)] bg-white p-7 shadow-[0_18px_50px_rgba(13,47,79,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_65px_rgba(13,47,79,0.12)]">
-                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--z-blue-2)]">
-                      {member.role}
-                    </p>
-                    <h3 className="mt-3 text-2xl font-semibold text-[var(--z-navy)]">
-                      {member.name}
-                    </h3>
-                    <p className="mt-4 text-base leading-7 text-gray-700">
-                      {member.summary}
-                    </p>
+            <div className="mt-14 grid gap-6 md:grid-cols-4 xl:grid-cols-6">
+              {teamMembers.map((member, index) => {
+                const cardPositionClass =
+                  index === 3
+                    ? "xl:col-start-2"
+                    : index === 4
+                      ? "md:col-start-2 xl:col-start-4"
+                      : "";
+
+                return (
+                  <div
+                    key={member.name}
+                    className={`h-full md:col-span-2 xl:col-span-2 ${cardPositionClass}`}
+                  >
+                    <Reveal delay={index * 0.05}>
+                      <article className="h-full rounded-[1.75rem] border border-[rgba(13,47,79,0.08)] bg-white p-7 shadow-[0_18px_50px_rgba(13,47,79,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_65px_rgba(13,47,79,0.12)]">
+                        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--z-blue-2)]">
+                          {member.role}
+                        </p>
+
+                        <h3 className="mt-3 text-2xl font-semibold text-[var(--z-navy)]">
+                          {member.name}
+                        </h3>
+
+                        <p className="mt-4 text-base leading-7 text-gray-700">
+                          {member.summary}
+                        </p>
+                      </article>
+                    </Reveal>
                   </div>
-                </Reveal>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
@@ -165,15 +181,18 @@ export default function AboutPage() {
                 <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--z-navy)]">
                   Team Strength
                 </p>
+
                 <h2 className="mt-4 text-4xl font-semibold tracking-tight text-[var(--z-text)] sm:text-5xl">
                   Built for strategic growth and dependable delivery
                 </h2>
+
                 <p className="mt-6 text-lg leading-8 text-gray-700">
                   Zarein Energy’s strength lies in combining engineering
                   capability, project management discipline, commercial
                   structuring, and operational support under one delivery-driven
                   platform.
                 </p>
+
                 <p className="mt-4 text-lg leading-8 text-gray-700">
                   This integrated team model allows us to move from concept to
                   execution with greater clarity, stronger partnerships, and a
@@ -187,27 +206,34 @@ export default function AboutPage() {
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-xl">
                     <p className="text-2xl font-semibold">Leadership</p>
+
                     <p className="mt-2 text-sm text-white/75">
                       Strategic guidance across infrastructure development and
                       execution.
                     </p>
                   </div>
+
                   <div className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-xl">
                     <p className="text-2xl font-semibold">Finance</p>
+
                     <p className="mt-2 text-sm text-white/75">
                       Strong capability in structuring, funding strategy, and
                       governance.
                     </p>
                   </div>
+
                   <div className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-xl">
                     <p className="text-2xl font-semibold">Technical</p>
+
                     <p className="mt-2 text-sm text-white/75">
                       Power systems, equipment strategy, project delivery, and
                       operations support.
                     </p>
                   </div>
+
                   <div className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-xl">
                     <p className="text-2xl font-semibold">People</p>
+
                     <p className="mt-2 text-sm text-white/75">
                       Organisational support, performance alignment, and team
                       enablement.
