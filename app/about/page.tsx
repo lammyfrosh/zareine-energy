@@ -33,6 +33,12 @@ const teamMembers = [
     summary:
       "People operations professional with broad cross-sector HR experience covering recruitment, employee engagement, performance management, and organisational support strategy.",
   },
+  {
+    name: "Bernard Fiyinfoluwa Olumoroti",
+    role: "New Power Project Lead",
+    summary:
+      "Power project development professional and Managing Director of Imperial Power and Energy Solutions (IPES), bringing leadership experience and a strong focus on advancing power and energy infrastructure projects.",
+  },
 ];
 
 export default function AboutPage() {
@@ -125,14 +131,14 @@ export default function AboutPage() {
                 </p>
 
                 <h2 className="mt-4 text-4xl font-semibold tracking-tight text-[var(--z-text)] sm:text-5xl">
-                  Experienced professionals driving execution, finance, and
-                  technical excellence
+                  Experienced professionals driving strategy, execution, finance,
+                  and technical excellence
                 </h2>
 
                 <p className="mt-6 text-lg leading-8 text-gray-700">
-                  Our leadership and advisory team combines project delivery
-                  discipline, financial depth, energy sector expertise, and
-                  people operations capability to support reliable
+                  Our leadership and advisory team combines project development,
+                  delivery discipline, financial depth, power sector expertise,
+                  and people operations capability to support reliable
                   infrastructure development across Nigeria.
                 </p>
               </div>
@@ -140,17 +146,10 @@ export default function AboutPage() {
 
             <div className="mt-14 grid gap-6 md:grid-cols-4 xl:grid-cols-6">
               {teamMembers.map((member, index) => {
-                const cardPositionClass =
-                  index === 3
-                    ? "xl:col-start-2"
-                    : index === 4
-                      ? "md:col-start-2 xl:col-start-4"
-                      : "";
-
                 return (
                   <div
                     key={member.name}
-                    className={`h-full md:col-span-2 xl:col-span-2 ${cardPositionClass}`}
+                    className="h-full md:col-span-2 xl:col-span-2"
                   >
                     <Reveal delay={index * 0.05}>
                       <article className="h-full rounded-[1.75rem] border border-[rgba(13,47,79,0.08)] bg-white p-7 shadow-[0_18px_50px_rgba(13,47,79,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_65px_rgba(13,47,79,0.12)]">
