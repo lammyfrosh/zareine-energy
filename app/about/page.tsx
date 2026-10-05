@@ -16,12 +16,6 @@ const teamMembers = [
       "Banking and finance executive with over two decades of experience spanning corporate banking, project and infrastructure finance, private equity, venture capital, and transaction structuring across African markets.",
   },
   {
-    name: "Edio Uti",
-    role: "Technical Consultant",
-    summary:
-      "Energy and industrial projects specialist with deep expertise in rotating equipment, electro-mechanical systems, procurement strategy, vendor management, and end-to-end project delivery.",
-  },
-  {
     name: "Damilare Olayiwola",
     role: "Technical Consultant",
     summary:
@@ -146,18 +140,27 @@ export default function AboutPage() {
 
             <div className="mt-14 grid gap-6 md:grid-cols-4 xl:grid-cols-6">
               {teamMembers.map((member, index) => {
+                const cardPositionClass =
+                  index === 3
+                    ? "xl:col-start-2"
+                    : index === 4
+                      ? "md:col-start-2 xl:col-start-4"
+                      : "";
+
                 return (
                   <div
                     key={member.name}
-                    className="h-full md:col-span-2 xl:col-span-2"
+                    className={`h-full md:col-span-2 xl:col-span-2 ${cardPositionClass}`}
                   >
                     <Reveal delay={index * 0.05}>
-                      <article className="h-full rounded-[1.75rem] border border-[rgba(13,47,79,0.08)] bg-white p-7 shadow-[0_18px_50px_rgba(13,47,79,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_65px_rgba(13,47,79,0.12)]">
+                      <article className="group relative h-full overflow-hidden rounded-[1.75rem] border border-[rgba(13,47,79,0.08)] bg-white p-7 shadow-[0_18px_50px_rgba(13,47,79,0.08)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_26px_70px_rgba(13,47,79,0.14)]">
+                        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[var(--z-blue)] via-[var(--z-blue-2)] to-[var(--z-navy)] opacity-80 transition-opacity duration-300 group-hover:opacity-100" />
+
                         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--z-blue-2)]">
                           {member.role}
                         </p>
 
-                        <h3 className="mt-3 text-2xl font-semibold text-[var(--z-navy)]">
+                        <h3 className="mt-3 text-2xl font-semibold tracking-tight text-[var(--z-navy)]">
                           {member.name}
                         </h3>
 
